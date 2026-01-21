@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Toka_fitness.css') }}">
+    <title>Toka Fitness – Membership</title>
+</head>
+
+<body>
+
+   
+    <div class="Container">
+        <h style="color: white; font-size: 18px; margin: auto;">
+            Get Up to £500 off membership if ordered before January 12th. Terms Apply. Shop now
+        </h>
+    </div>
+
+  
+    <div class="Container_alternate">
+
+        <div class="Logo_container">
+            <a href="{{ url_for('homepage') }}">
+            <img style="width: 100%; height: 100%; cursor: pointer;"
+             src="{{ url_for('static', filename='ChatGPT Image Jan 7, 2026, 11_26_48 AM.png') }}"
+             alt="logo">
+             </a>
+        </div>
+
+        <div class="Center_header_container">
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('membership') }}'">Membership</button>
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('find_gym') }}'">Gyms</button>
+            <button class="Nav_bar_button">Training regimes</button>
+            <button class="Nav_bar_button">Equipment</button>
+        </div>
+
+        <div class="Icons_container">
+            <button class="img_button" onclick="window.location.href='{{ url_for('profile') }}'">
+                <img style="width: 100%; height: 100%;"
+                     src="{{ url_for('static', filename='icons8-user-male-24.png') }}"
+                     alt="user">
+            </button>
+
+            <button class="img_button">
+                <img style="width: 100%; height: 100%;"
+                     src="{{ url_for('static', filename='icons8-settings-64.png') }}"
+                     alt="settings">
+            </button>
+        </div>
+    </div>
+
+  
+    <div class="membership_page_title">
+        <h3>Tailor-made for your health</h3>
+    </div>
+
+    <p id="sub_title" style="text-align:center;">
+        Shape Toka Fitness to your goals. Customise your training, your pace, your journey.
+    </p>
+
+
+    <div class="feature-cards">
+
+        <div class="feature-card">
+            <h3>Train with expert guidance</h3>
+            <p>Access professionally designed workout plans built to improve strength and performance.</p>
+            <a href="#">View training plans →</a>
+        </div>
+
+        <div class="feature-card">
+            <h3>Track progress like a pro</h3>
+            <p>Monitor workouts, track personal bests, and stay consistent with progress insights.</p>
+            <a href="#">Track my progress →</a>
+        </div>
+
+        <div class="feature-card">
+            <h3>Train smarter & safer</h3>
+            <p>Follow structured programs designed to reduce injury risk and maximise gains.</p>
+            <a href="#">Learn more →</a>
+        </div>
+
+    </div>
+
+    
+    <p style="text-align: center; margin-top: 100px; margin-bottom: 100px; color: black;">
+        ________________________________________________________________________________________________
+    </p>
+
+   
+    <div class="plans-hero">
+        <span class="plans-pill">Plans</span>
+        <h1>Take flight with Toka Fitness</h1>
+    </div>
+
+    <div class="pricing-container">
+
+       
+        <div class="plan">
+            <h3 class="plan-title">Free</h3>
+            <p class="plan-subtitle">Get started with the basics.</p>
+
+            <div class="price">
+                <span class="amount">£0</span>
+                <span class="period">/ month</span>
+            </div>
+
+            <button class="primary-btn">Get started</button>
+
+            <hr>
+
+            <ul>
+                <li>✔ Gym access (off-peak)</li>
+                <li>✔ Free induction</li>
+                <li>✔ Basic workout plan</li>
+            </ul>
+        </div>
+
+   
+        <div class="plan highlight">
+            <span class="badge">Most popular</span>
+
+            <h3 class="plan-title">Pro</h3>
+            <p class="plan-subtitle">Train harder, get more.</p>
+
+            <div class="price">
+                <span class="amount">£25</span>
+                <span class="period">/ month</span>
+            </div>
+
+            <button class="primary-btn">Join now</button>
+
+            <hr>
+
+            <ul>
+                <li>✔ Unlimited gym access</li>
+                <li>✔ Personalised training plan</li>
+                <li>✔ Group classes included</li>
+                <li>✔ Progress tracking</li>
+            </ul>
+        </div>
+
+
+        <div class="plan">
+            <h3 class="plan-title">Elite</h3>
+            <p class="plan-subtitle">Maximum results.</p>
+
+            <div class="price">
+                <span class="amount">£45</span>
+                <span class="period">/ month</span>
+            </div>
+
+            <button class="primary-btn">Go elite</button>
+
+            <hr>
+
+            <ul>
+                <li>✔ Everything in Pro</li>
+                <li>✔ 1-to-1 PT sessions</li>
+                <li>✔ Nutrition coaching</li>
+                <li>✔ Priority booking</li>
+            </ul>
+        </div>
+
+    </div>
+
+<elevenlabs-convai agent-id="agent_4601kcp129rbfqes36xvr4zr62f7"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed@beta" async type="text/javascript"></script>
+</body>
+</html>

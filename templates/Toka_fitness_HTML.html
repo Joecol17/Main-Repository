@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Toka_fitness.css') }}">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+   <body style="background-color: white; margin: 0; padding: 0; font-family: proxima-nova, sans-serif; ">
+    
+   <div class="Container">
+        <h style="color: white; font-size: 18px; margin: auto;">Get Up to £500 off membership if ordered before January 12th. Terms Apply. Shop now </h>
+   </div>
+
+   <div class="Container_alternate">
+  
+        <div class="Logo_container">
+            <a href="{{ url_for('homepage') }}">
+            <img style="width: 100%; height: 100%; cursor: pointer;"
+             src="{{ url_for('static', filename='ChatGPT Image Jan 7, 2026, 11_26_48 AM.png') }}"
+             alt="logo">
+             </a>
+        </div>
+
+
+        <div class="Center_header_container">
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('membership') }}'">Membership</button>
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('find_gym') }}'">Gyms</button>
+
+            <button class="Nav_bar_button">Training regimes</button>
+            <button class="Nav_bar_button">Equipment</button>
+        </div>
+        
+        <div class="Icons_container">
+           <button class="img_button" onclick="window.location.href='{{ url_for('profile') }}'">
+               <img style="width: 100%; height: 100%;" 
+                    src="{{ url_for('static', filename='icons8-user-male-24.png') }}" 
+                    alt="user">
+           </button>
+           
+           <button class="img_button">
+               <img style="width: 100%; height: 100%;" 
+                    src="{{ url_for('static', filename='icons8-settings-64.png') }}" 
+                    alt="setting">
+           </button>
+        </div>
+
+   </div>
+
+   <div class="Hero_container">
+        <img style="width: 100%; height: 100%; object-fit: cover;" 
+             src="{{ url_for('static', filename='New_hero_picture.avif') }}" 
+             alt="Hero_image" 
+             class="Hero_image_style">
+   </div>
+
+   <div class="Video_container">
+        <div class="Small_Boxes_container">
+            <button class="Small_Button_style" onclick="window.location.href='{{ url_for('find_gym') }}'">Find Your GYM</button> 
+            <button class="Small_Button_style" onclick="window.location.href='{{ url_for('login') }}'"> Become a Member </button>
+        </div>
+ 
+        <div class="side_text_container">
+            <div class="side_text_inside">
+                <div class="text_in_side_text_container"></div>
+            </div>
+        </div>
+
+        <div class="Overview_section_container">
+            <div class="Overview_section_content_container"> 
+                <h2> Toka Fitness Lightwater Leisure Centre</h2>
+                <p style="font-size: 22px; width: 500px; padding-bottom: 20px;"> In partnership with the Lightwater Playing Fields Association Ltd.</p>
+                    
+                <ul>
+                    <li> 24 Hour Access </li>
+                    <li> State of the Art Equipment </li>
+                    <li> Expert Personal Trainers </li>
+                    <li> Group Fitness Classes </li>
+                    <li> Nutritional Guidance </li>
+                    <li> Wellness Programs </li>
+                    <li> Flexible Membership Options </li>
+                    <li> Community Events </li>
+                    <li> Online Booking System </li>
+                    <li> Dedicated Support Team </li>
+                </ul>
+               
+            </div>
+
+            <div class="Overview_section_advertising_container">
+                <div class="left">
+                    <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px 0 0 20px;" 
+                         src="{{ url_for('static', filename='photo-1593079831268-3381b0db4a77.avif') }}" 
+                         alt="Saunas">
+                </div>
+
+                <div class="right">
+                    <h style="padding-left: 10px; font-size: 30px;">Experience Our Premium Facilities</h>
+                    <p style="padding-left: 10px; font-size: 15px;">plus £0 joining fee!</p>
+                </div>
+            </div> 
+        </div>
+   </div>
+
+<footer class="site-footer">
+
+    <div class="footer-section footer-brand">
+        <h2>Toka Fitness</h2>
+        <p>
+            Where dedication meets results. At Toka Fitness, we provide expert coaching,
+            structured training programs, and a motivating environment designed to help
+            every member reach their full potential — no matter their starting point.
+        </p>
+    </div>
+
+    <div class="footer-section">
+        <h3>Explore</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Memberships</a></li>
+            <li><a href="#">Classes & Timetables</a></li>
+            <li><a href="#">Personal Training</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Training & Services</h3>
+        <ul>
+            <li>Strength & Conditioning</li>
+            <li>Fat Loss Programs</li>
+            <li>Muscle Building</li>
+            <li>One-to-One Coaching</li>
+            <li>Group Training</li>
+            <li>Lifestyle & Wellbeing</li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+            <li>Email: info@tokafitness.co.uk</li>
+            <li>Phone: 07XXX XXXXXX</li>
+            <li>Location: United Kingdom</li>
+            <li>Opening Hours:</li>
+            <li>Monday–Friday: 6:00am – 10:00pm</li>
+            <li>Saturday–Sunday: 8:00am – 8:00pm</li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Toka Fitness. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> •
+            <a href="#">Terms & Conditions</a>
+        </p>
+    </div>
+
+</footer>
+
+<elevenlabs-convai agent-id="agent_4601kcp129rbfqes36xvr4zr62f7"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed@beta" async type="text/javascript"></script>
+
+</html>

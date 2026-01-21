@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Toka_fitness.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='Map_Tracking.js') }}"></script>
+
+    <style>
+        /* Section wrapper */
+        .gym_map_section {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* Description text */
+        .gym_description {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .gym_description h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .gym_description p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Side-by-side layout */
+        .gym_map_row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* Gym photo */
+        .gym_photo {
+            flex: 1 1 500px;
+            max-width: 600px;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .gym_photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Bigger map */
+        .gym_map {
+            flex: 1 1 700px;
+            max-width: 750px;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .gym_map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <div class="Container">
+        <h style="color: white; font-size: 18px; margin: auto;">
+            Get Up to £500 off membership if ordered before January 12th. Terms Apply. Shop now
+        </h>
+    </div>
+
+  
+    <div class="Container_alternate">
+
+        <div class="Logo_container">
+            <a href="{{ url_for('homepage') }}">
+            <img style="width: 100%; height: 100%; cursor: pointer;"
+             src="{{ url_for('static', filename='ChatGPT Image Jan 7, 2026, 11_26_48 AM.png') }}"
+             alt="logo">
+             </a>
+        </div>
+
+        <div class="Center_header_container">
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('membership') }}'">Membership</button>
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('find_gym') }}'">Gyms</button>
+            <button class="Nav_bar_button">Training regimes</button>
+            <button class="Nav_bar_button">Equipment</button>
+        </div>
+
+        <div class="Icons_container">
+            <button class="img_button" onclick="window.location.href='{{ url_for('profile') }}'">
+                <img style="width: 100%; height: 100%;"
+                     src="{{ url_for('static', filename='icons8-user-male-24.png') }}"
+                     alt="user">
+            </button>
+
+            <button class="img_button">
+                <img style="width: 100%; height: 100%;"
+                     src="{{ url_for('static', filename='icons8-settings-64.png') }}"
+                     alt="settings">
+            </button>
+        </div>
+
+    </div>
+
+   
+
+        <div class="Text_Box">
+            <p style="color: white; font-size: x-large;">Farnborough</p>
+            <p style="color: white; font-size: larger;">24 Maple Grove, Hampshire, GU14 3YZ</p>
+        </div>
+    </div>
+
+
+    <div class="gym_map_section">
+
+        <div class="gym_description">
+            <h2>Welcome to Toka Farnborough</h2>
+            <p>
+                Our Farnborough location features state-of-the-art equipment, spacious interiors, and a vibrant atmosphere.
+                Whether you're training solo or joining a class, this gym offers everything you need to reach your goals.
+            </p>
+        </div>
+
+        <div class="gym_map_row">
+
+          
+            <div class="gym_photo">
+                <img src="{{ url_for('static', filename='photo-1593079831268-3381b0db4a77.avif') }}" alt="Gym">
+            </div>
+
+       
+            <div class="gym_map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1nGht9B4_QNu8-B7S8AG1doWhPy8C0Nc&ehbc=2E312F"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+<elevenlabs-convai agent-id="agent_4601kcp129rbfqes36xvr4zr62f7"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed@beta" async type="text/javascript"></script>
+</body>
+</html>
