@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Toka_fitness.css') }}">
+    <title>Toka Fitness - Profile</title>
+</head>
+
+<body style="background-color: white; margin: 0; padding: 0; font-family: proxima-nova, sans-serif; ">
+    
+   <div class="Container">
+        <h style="color: white; font-size: 18px; margin: auto;">Get Up to £500 off membership if ordered before January 12th. Terms Apply. Shop now </h>
+   </div>
+
+   <div class="Container_alternate">
+  
+        <div class="Logo_container">
+            <a href="{{ url_for('homepage') }}">
+            <img style="width: 100%; height: 100%; cursor: pointer;"
+             src="{{ url_for('static', filename='ChatGPT Image Jan 7, 2026, 11_26_48 AM.png') }}"
+             alt="logo">
+             </a>
+        </div>
+
+        <div class="Center_header_container">
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('membership') }}'">Membership</button>
+            <button class="Nav_bar_button" onclick="window.location.href='{{ url_for('find_gym') }}'">Gyms</button>
+
+            <button class="Nav_bar_button">Training regimes</button>
+            <button class="Nav_bar_button">Equipment</button>
+        </div>
+        
+        <div class="Icons_container">
+           <button class="img_button" onclick="window.location.href='{{ url_for('profile') }}'">
+               <img style="width: 100%; height: 100%;" 
+                    src="{{ url_for('static', filename='icons8-user-male-24.png') }}" 
+                    alt="user">
+           </button>
+           
+           <button class="img_button">
+               <img style="width: 100%; height: 100%;" 
+                    src="{{ url_for('static', filename='icons8-settings-64.png') }}" 
+                    alt="setting">
+           </button>
+        </div>
+
+   </div>
+
+<div class="profile-container">
+
+    <img class="profile-picture" 
+         src="{{ url_for('static', filename='icons8-user-male-24.png') }}" 
+         alt="Profile Picture">
+
+    <div class="profile-username">
+        {{ session['user'] }}
+    </div>
+
+    <div class="profile-info">
+        Welcome back to Toka Fitness.  
+        Your journey continues — stay strong, stay consistent.
+    </div>
+
+    <div class="profile-buttons">
+        <button class="profile-btn" onclick="window.location.href='{{ url_for('home') }}'">Home</button>
+        <button class="profile-btn" onclick="window.location.href='{{ url_for('logout') }}'">Log Out</button>
+    </div>
+
+</div>
+
+</body>
+</html>
