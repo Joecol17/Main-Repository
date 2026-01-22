@@ -1,14 +1,80 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import os
+import sqlite3 as SQLite3
+from pathlib import Path
+from werkzeug.security import generate_password_hash, check_password_hash
+
+
+DB_PATH = Path("data.db")
+
+def build_db():
+    connection = SQLite3.connect(DB_PATH)
+    connection.execute("""
+        CREATE TABLE IF NOT EXISTS credential_system ( 
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE NOT NULL,
+            password TEXT NOT NULL           
+        );
+    """)
+
+    connection.commit()
+    connection.close()
+
+def prepopulate_db():
+    connection = SQLite3.connect(DB_PATH)
+    query = connection.execute("SELECT * FROM credential_system;")
+    people = query.fetchall()
+    if not people:
+        connection.executemany(
+           "INSERT INTO credential_system (username, password) VALUES (?, ?);",
+            [("Admin", "password123")]
+        )
+
+    connection.commit()
+    connection.close()
+
+def get_db():
+    connection = SQLite3.connect(DB_PATH)
+    connection.row_factory = SQLite3.Row
+    return connection
+
+
+build_db()
+prepopulate_db()
+
+
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  
 
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    error = None
 
-users = {
-    "admin": "password123",
-    "user1": "mypassword"
-}
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        db = get_db()   
+        cursor = db.cursor()
+    
+        cursor.execute(
+            "SELECT * FROM credential_system WHERE username = ?",
+            (username,)
+        )
+        user = cursor.fetchone()
+        db.close()
+
+        if user and check_password_hash(user["password"], password):
+            session['user'] = user["username"]
+            return redirect(url_for('dashboard'))
+        else:
+            error = "Invalid username or password."
+
+    return render_template('Toka_fitness_Login_page.html', error=error)
+
+
+
 
 @app.route('/')
 def home():
