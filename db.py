@@ -58,21 +58,7 @@ def login():
         db = get_db()   
         cursor = db.cursor()
     
-        cursor.execute(
-            "SELECT * FROM credential_system WHERE username = ?",
-            (username,)
-        )
-        user = cursor.fetchone()
-        db.close()
-
-        if user and check_password_hash(user["password"], password):
-            session['user'] = user["username"]
-            return redirect(url_for('dashboard'))
-        else:
-            error = "Invalid username or password."
-
-    return render_template('Toka_fitness_Login_page.html', error=error)
-
+        
 
 
 
